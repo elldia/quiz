@@ -1,0 +1,676 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title></title>
+<meta name="generator" content="EclipseCrossword" />
+<style type="text/css"><!--
+
+body, h1, h2, h3, h4, h5, h6
+{
+	font-family: "Segoe UI", "Franklin Gothic Medium", "Arial", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	color: #5d6a86;
+}
+
+body
+{
+	cursor: default;
+	font-size: small;
+}
+
+.ecw-answerbox
+{
+	color: black;
+	background-color: #FFFAF0;
+	border-color: #808080;
+	border-style: solid;
+	border-width: 1px;
+	display: block;
+	padding: .75em;
+	width: 240pt;
+}
+
+.ecw-box
+{
+	border-style: solid;
+	border-width: 1pt;
+	cursor: pointer;
+	font-size: .12in;
+	font-weight: bold;
+	height: .18in;
+	overflow: hidden;
+	text-align: center;
+	width: .18in;
+}
+
+.ecw-boxcheated_sel
+{
+	background-color: #FFF1D7;
+	border-color: #C00000;
+	color: #2080D0;
+}
+
+.ecw-boxcheated_unsel
+{
+	background-color: #ffffff;
+	border-color: #606060;
+	color: #2080D0;
+}
+
+.ecw-boxerror_sel
+{
+	background-color: #FFF1D7;
+	border-color: #C00000;
+	color: #BF0000;
+}
+
+.ecw-boxerror_unsel
+{
+	background-color: #FFF0F0;
+	border-color: #606060;
+	color: #BF0000;
+}
+
+.ecw-boxnormal_sel
+{
+	background-color: #FFF1D7;
+	border-color: #C00000;
+	color: #000000;
+}
+
+.ecw-boxnormal_unsel
+{
+	background-color: #ffffff;
+	border-color: #606060;
+	color: #000000;
+}
+
+.ecw-button
+{
+	width: 64pt;
+}
+
+.ecw-cluebox
+{
+	border-bottom-width: 1px;
+	border-color: #c0c0c0;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-style: solid;
+	border-top-width: 1px;
+	margin-top: 1em;
+	padding-bottom: .5em;
+	padding-left: 0pt;
+	padding-right: 0pt;
+	padding-top: .5em;
+}
+
+.ecw-crosswordarea
+{
+	background-color: #D0D8E0;
+	border-color: #808080;
+	border-style: solid;
+	border-width: 2px;
+	padding: .5em;
+	font-family: "Segoe UI", "Verdana", "Arial", sans-serif;
+	font-size: small;
+}
+
+.ecw-copyright
+{
+	margin-bottom: 1em;
+	font-size: x-small;
+	font-family: "Segoe UI", "Franklin Gothic Medium", "Arial", sans-serif;
+}
+
+.ecw-input
+{
+	font-family: "Segoe UI", "Verdana", "Arial", sans-serif;
+}
+
+.ecw-wordlabel
+{
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.ecw-wordinfo
+{
+	font-size: 8pt;
+	color: #808080;
+}
+
+.ecw-worderror
+{
+	color: #c00000;
+	font-weight: bold;
+	display: none;
+	margin-top: 1em;
+}
+
+--></style>
+
+</head><body>
+
+<h1></h1>
+<h3 style="margin-top: -1em;"></h3>
+
+<div id="waitmessage" class="ecw-answerbox">
+	This interactive crossword puzzle requires JavaScript and any 
+	recent web browser, including Windows Internet Explorer, Mozilla Firefox, Google Chrome, or 
+	Apple Safari.  If you have disabled web page scripting, please re-enable it and refresh
+	the page.  If this web page is saved on your computer, you may need to click the yellow Information Bar at the top or bottom of
+	the page to allow the puzzle to load.
+</div>
+
+<table cellpadding="0" cellspacing="0" border="0"><tr>
+
+<td class="ecw-crosswordarea">
+
+<script type="text/javascript"><!--
+	CrosswordWidth = 35;
+	CrosswordHeight = 32;
+	Words = 48;
+	WordLength = new Array(8, 6, 5, 8, 16, 7, 4, 11, 2, 4, 2, 11, 8, 4, 8, 4, 5, 5, 6, 2, 7, 5, 11, 5, 7, 12, 8, 15, 3, 7, 3, 5, 8, 8, 6, 4, 11, 3, 6, 6, 5, 9, 7, 2, 7, 7, 3, 4);
+	Word = new Array();
+	Clue = new Array("선택양식 중 다중선택이 가능한 것", 
+"html에서 m의 뜻", 
+"테이블의 결과 행을 묶어주는 그룹태그", 
+"폼 양식의 그룹을 묶을 때 사용하는 태그", 
+"모든 페이지에서 공통적으로 제공되는 내비게이션", 
+"연락처 및 회사 주소 등을 담을 수 있는 태그", 
+"문서의 정보를 담는 태그", 
+"다국어 언어 설정 (특수문자 없이)", 
+"비순차 목록", 
+"스크린리더기가 화면의 언어를 읽을 수 있도록 하는 속성", 
+"레이아웃에 명칭으로 주로 사용하는 반복할 수 없는 이름", 
+"검색결과에 나타나는 문서의 정보", 
+"동영상의 재생정지 등을 할 수 있는 제어기를 표시하는 속성", 
+"외부 스타일 연결 시 사용하는 태그명", 
+"사용자가 직접 입력할 수 있도록 여러 줄을 제공하는 칸", 
+"의미없는 장식적인 용도로 사용하는 인라인 태그", 
+"웹페이지 접속 시 동영상을 자동재생시키기 위해 필요한 사용자편의성 속성", 
+"내부 CSS를 작성 시 사용하는 태그", 
+"폼 양식의 전송 방식을 결정하는 속성", 
+"순차 목록 그룹", 
+"독립적인 내용을 담아주는 그룹 요소", 
+"HTML5의 동영상 태그", 
+"HTML5의 의미있는 레이아웃으로 생성된 새로운 태그 명", 
+"선택양식 그룹 중 1개만 선택할 수 있도록 만드는 것", 
+"같은 행에 있는 서로 다른 열을 병합하는 속성", 
+"폼에서 목록양식을 만들 경우 필요한 태그", 
+"비밀번호, 주민등록번호 뒷 번호 입력 칸을 제작시 필요한 속성명", 
+"하위 내비게이션으로 서브 메뉴를 지칭하거나 보조메뉴를 뜻하는 명칭", 
+"내비게이션을 묶어주는 그룹 태그", 
+"서로 다른 행에 있는 열을 병합하는 속성", 
+"HTML5 이미지의 필수 속성", 
+"웹페이지가 다수 열려있을 경우 이것을 이용하여 페이지를 쉽게 구분할 수 있다.", 
+"줄바꿈, 크기를 가질 수 있는 요소의 성격", 
+"폼에서 사용자의 편의성을 높이기 위해 사용하는 자동선택기능", 
+"전송, 확인 용으로 사용하는 버튼의 종류", 
+"링크의 필수 속성으로 주소를 담을 수 있다.", 
+"HTML5 선언 태그", 
+"2개 이상의 형제 요소를 묶어주는 그룹 태그", 
+"사전 등의 정의형 내용에 사용하는 태그", 
+"내용을 강조 시 사용하는 태그", 
+"반복되는 디자인 요소에 설정하는 태그의 추가 명칭", 
+"내용 크기만큼 인식하는 요소의 성격", 
+"검색어를 담을 수 있는 meta의 속성의 이름", 
+"내용을 강조 시 사용하는 태그2", 
+"h1~6 태그의 풀네임명", 
+"목록에 사용하는 요소", 
+"이미지의 경로를 담는 속성", 
+"웹 페이지의 본문을 의미하는 요소");
+	AnswerHash = new Array(34642, 83659, 64671, 26143, 20592, 93494, 59551, 88590, 44943, 27553, 4747, 25430, 90513, 29553, 70583, 58450, 39906, 59452, 41161, 45327, 43474, 81531, 19877, 7101, 30365, 23312, 94989, 12967, 39952, 79039, 9846, 85171, 5080, 79306, 77918, 65459, 17484, 85080, 61099, 11528, 66633, 72191, 455, 17260, 29529, 41068, 90743, 37411);
+	WordX = new Array(20, 29, 5, 25, 3, 21, 5, 13, 22, 15, 11, 0, 12, 6, 18, 25, 14, 3, 12, 11, 15, 14, 5, 19, 5, 26, 30, 8, 10, 17, 21, 1, 15, 23, 21, 4, 12, 0, 18, 28, 25, 7, 9, 14, 15, 20, 5, 23);
+	WordY = new Array(0, 1, 3, 3, 6, 6, 8, 8, 10, 11, 13, 14, 15, 16, 17, 18, 19, 21, 22, 23, 24, 26, 28, 29, 30, 0, 0, 2, 5, 5, 6, 10, 10, 10, 12, 13, 13, 14, 14, 14, 15, 16, 16, 18, 22, 24, 28, 28);
+	LastHorizontalWord = 24;
+	OnlyCheckOnce = false;
+//-->
+</script>
+
+<script type="text/javascript"><!--
+
+// EclipseCrossword (C) Copyright 2000-2013 Green Eclipse.
+// The puzzle itself remains the property of its creator. Do not remove this copyright notice.
+
+var BadChars = "`~!@^*()_={[}]\\|:;\"',<>/?";
+
+var TableAcrossWord, TableDownWord;
+var CurrentWord, PrevWordHorizontal, x, y, i, j;
+var CrosswordFinished, Initialized;
+
+// Check the user's browser and then initialize the puzzle.
+if (document.getElementById("waitmessage") != null)
+{
+	document.getElementById("waitmessage").innerHTML = "Please wait while the crossword is loaded...";
+	
+	// Current game variables
+	CurrentWord = -1;
+	PrevWordHorizontal = false;
+	
+	// Create the cell-to-word arrays.
+	TableAcrossWord = new Array(CrosswordWidth);
+	for (var x = 0; x < CrosswordWidth; x++) TableAcrossWord[x] = new Array(CrosswordHeight);
+	TableDownWord = new Array(CrosswordWidth);
+	for (var x = 0; x < CrosswordWidth; x++) TableDownWord[x] = new Array(CrosswordHeight);
+	for (var y = 0; y < CrosswordHeight; y++)
+		for (var x = 0; x < CrosswordWidth; x++)
+		{
+			TableAcrossWord[x][y] = -1;
+			TableDownWord[x][y] = -1;
+		}
+	
+	// First, add the horizontal words to the puzzle.
+	for (var i = 0; i <= LastHorizontalWord; i++)
+	{
+		x = WordX[i];
+		y = WordY[i];
+		for (var j = 0; j < WordLength[i]; j++)
+		{
+			TableAcrossWord[x + j][y] = i;
+		}
+	}
+	
+	// Second, add the vertical words to the puzzle.
+	for (var i = LastHorizontalWord + 1; i < Words; i++)
+	{
+		x = WordX[i];
+		y = WordY[i];
+		for (var j = 0; j < WordLength[i]; j++)
+		{
+			TableDownWord[x][y + j] = i;
+		}
+	}
+	
+	// Now, insert the crossword table.
+	document.writeln("<table id=\"crossword\" cellpadding=\"0\" cellspacing=\"0\" style=\"display: none; border-collapse: collapse;\">");
+	for (var y = 0; y < CrosswordHeight; y++)
+	{
+		document.writeln("<tr>");
+		for (var x = 0; x < CrosswordWidth; x++)
+		{
+			if (TableAcrossWord[x][y] >= 0 || TableDownWord[x][y] >= 0)
+				document.write("<td id=\"c" + PadNumber(x) + PadNumber(y) + "\" class=\"ecw-box ecw-boxnormal_unsel\" onclick=\"SelectThisWord(event);\">&nbsp;</td>");
+			else
+				document.write("<td><\/td>");
+		}
+		document.writeln("<\/tr>");
+	}
+	document.writeln("<\/table>");
+	
+	// Finally, show the crossword and hide the wait message.
+	Initialized = true;
+	document.getElementById("waitmessage").style.display = "none";
+	document.getElementById("crossword").style.display = "block";
+}
+
+// * * * * * * * * * *
+// Event handlers
+
+// Raised when a key is pressed in the word entry box.
+function WordEntryKeyPress(event)
+{
+	if (CrosswordFinished) return;
+	// Treat an Enter keypress as an OK click.
+	if (CurrentWord >= 0 && event.keyCode == 13) OKClick();
+}
+
+// * * * * * * * * * *
+// Helper functions
+
+// Called when we're ready to start the crossword.
+function BeginCrossword()
+{
+	if (Initialized)
+	{
+		document.getElementById("welcomemessage").style.display = "";
+		document.getElementById("checkbutton").style.display = "";
+	}
+}
+
+// Returns true if the string passed in contains any characters prone to evil.
+function ContainsBadChars(theirWord)
+{
+	for (var i = 0; i < theirWord.length; i++)
+		if (BadChars.indexOf(theirWord.charAt(i)) >= 0) return true;
+	return false;
+}
+
+// Pads a number out to three characters.
+function PadNumber(number)
+{
+	if (number < 10)
+		return "00" + number;
+	else if (number < 100)
+		return "0" + number;
+	else
+		return "" +  number;
+}
+
+// Returns the table cell at a particular pair of coordinates.
+function CellAt(x, y)
+{
+	return document.getElementById("c" + PadNumber(x) + PadNumber(y));
+}
+
+// Deselects the current word, if there's a word selected.  DOES not change the value of CurrentWord.
+function DeselectCurrentWord()
+{
+	if (CurrentWord < 0) return;
+	var x, y, i;
+	
+	document.getElementById("answerbox").style.display = "none";
+	ChangeCurrentWordSelectedStyle(false);
+	CurrentWord = -1;
+	
+}
+
+// Changes the style of the cells in the current word.
+function ChangeWordStyle(WordNumber, NewStyle)
+{
+	if (WordNumber< 0) return;
+	var x = WordX[WordNumber];
+	var y = WordY[WordNumber];
+	
+	if (WordNumber<= LastHorizontalWord)
+		for (i = 0; i < WordLength[WordNumber]; i++)
+			CellAt(x + i, y).className = NewStyle;
+	else
+		for (i = 0; i < WordLength[WordNumber]; i++)
+			CellAt(x, y + i).className = NewStyle;
+}
+
+// Changes the style of the cells in the current word between the selected/unselected form.
+function ChangeCurrentWordSelectedStyle(IsSelected)
+{
+	if (CurrentWord < 0) return;
+	var x = WordX[CurrentWord];
+	var y = WordY[CurrentWord];
+	
+	if (CurrentWord <= LastHorizontalWord)
+		for (i = 0; i < WordLength[CurrentWord]; i++)
+			CellAt(x + i, y).className = CellAt(x + i, y).className.replace(IsSelected ? "_unsel" : "_sel", IsSelected ? "_sel" : "_unsel");
+	else
+		for (i = 0; i < WordLength[CurrentWord]; i++)
+			CellAt(x, y + i).className = CellAt(x, y + i).className.replace(IsSelected ? "_unsel" : "_sel", IsSelected ? "_sel" : "_unsel");
+}
+
+// Selects the new word by parsing the name of the TD element referenced by the 
+// event object, and then applying styles as necessary.
+function SelectThisWord(event)
+{
+	if (CrosswordFinished) return;
+	var x, y, i, TheirWord, TableCell;
+	
+	// Deselect the previous word if one was selected.
+	document.getElementById("welcomemessage").style.display = "none";
+	if (CurrentWord >= 0) OKClick();
+	DeselectCurrentWord();
+	
+	// Determine the coordinates of the cell they clicked, and then the word that
+	// they clicked.
+	var target = (event.srcElement ? event.srcElement: event.target);
+	x = parseInt(target.id.substring(1, 4), 10);
+	y = parseInt(target.id.substring(4, 7), 10);
+	
+	// If they clicked an intersection, choose the type of word that was NOT selected last time.
+	if (TableAcrossWord[x][y] >= 0 && TableDownWord[x][y] >= 0)
+		CurrentWord = PrevWordHorizontal ? TableDownWord[x][y] : TableAcrossWord[x][y];
+	else if (TableAcrossWord[x][y] >= 0)
+		CurrentWord = TableAcrossWord[x][y];
+	else if (TableDownWord[x][y] >= 0)
+		CurrentWord = TableDownWord[x][y];
+
+	PrevWordHorizontal = (CurrentWord <= LastHorizontalWord);
+	
+	// Now, change the style of the cells in this word.
+	ChangeCurrentWordSelectedStyle(true);
+	
+	// Then, prepare the answer box.
+	x = WordX[CurrentWord];
+	y = WordY[CurrentWord];
+	TheirWord = "";
+	var TheirWordLength = 0;
+	for (i = 0; i < WordLength[CurrentWord]; i++)
+	{
+		// Find the appropriate table cell.
+		if (CurrentWord <= LastHorizontalWord)
+			TableCell = CellAt(x + i, y);
+		else
+			TableCell = CellAt(x, y + i);
+		// Add its contents to the word we're building.
+		if (TableCell.innerHTML != null && TableCell.innerHTML.length > 0 && TableCell.innerHTML != " " && TableCell.innerHTML.toLowerCase() != "&nbsp;")
+		{
+			TheirWord += TableCell.innerHTML.toUpperCase();
+			TheirWordLength++;
+		}
+		else
+		{
+			TheirWord += "&bull;";
+		}
+	}
+	
+	document.getElementById("wordlabel").innerHTML = TheirWord;
+	document.getElementById("wordinfo").innerHTML = ((CurrentWord <= LastHorizontalWord) ? "Across, " : "Down, ") + WordLength[CurrentWord] + " letters.";
+	document.getElementById("wordclue").innerHTML = Clue[CurrentWord];
+	document.getElementById("worderror").style.display = "none";
+	document.getElementById("cheatbutton").style.display = (Word.length == 0) ? "none" : "";
+	if (TheirWordLength == WordLength[CurrentWord])
+		document.getElementById("wordentry").value = TheirWord.replace(/&AMP;/g, '&');
+	else
+		document.getElementById("wordentry").value = "";
+	
+	// Finally, show the answer box.
+	document.getElementById("answerbox").style.display = "block";
+	try
+	{
+		document.getElementById("wordentry").focus();
+		document.getElementById("wordentry").select();
+	}
+	catch (e)
+	{
+	}
+	
+}
+
+// Called when the user clicks the OK link.
+function OKClick()
+{
+	var TheirWord, x, y, i, TableCell;
+	if (CrosswordFinished) return;
+	if (document.getElementById("okbutton").disabled) return;
+	
+	// First, validate the entry.
+	TheirWord = document.getElementById("wordentry").value.toUpperCase();
+	if (TheirWord.length == 0)
+	{
+		DeselectCurrentWord();
+		return;
+	}
+	if (ContainsBadChars(TheirWord))
+	{
+		document.getElementById("worderror").innerHTML = "The word that you typed contains invalid characters.  Please type only letters in the box above.";
+		document.getElementById("worderror").style.display = "block";
+		return;
+	}
+	if (TheirWord.length < WordLength[CurrentWord])
+	{
+		document.getElementById("worderror").innerHTML  = "You did not type enough letters.  This word has " + WordLength[CurrentWord] + " letters.";
+		document.getElementById("worderror").style.display = "block";
+		return;
+	}
+	if (TheirWord.length > WordLength[CurrentWord])
+	{
+		document.getElementById("worderror").innerHTML = "You typed too many letters.  This word has " + WordLength[CurrentWord] + " letters.";
+		document.getElementById("worderror").style.display = "block";
+		return;
+	}
+	
+	// If we made it this far, they typed an acceptable word, so add these letters to the puzzle and hide the entry box.
+	x = WordX[CurrentWord];
+	y = WordY[CurrentWord];
+	for (i = 0; i < TheirWord.length; i++)
+	{
+		TableCell = CellAt(x + (CurrentWord <= LastHorizontalWord ? i : 0), y + (CurrentWord > LastHorizontalWord ? i : 0));
+		TableCell.innerHTML = TheirWord.substring(i, i + 1);
+	}
+	DeselectCurrentWord();
+}
+
+// Called when the "check puzzle" link is clicked.
+function CheckClick()
+{
+	var i, j, x, y, UserEntry, ErrorsFound = 0, EmptyFound = 0, TableCell;
+	if (CrosswordFinished) return;
+	DeselectCurrentWord();
+	
+	for (y = 0; y < CrosswordHeight; y++)
+	for (x = 0; x < CrosswordWidth; x++)
+		if (TableAcrossWord[x][y] >= 0 || TableDownWord[x][y] >= 0)
+		{
+			TableCell = CellAt(x, y);
+			if (TableCell.className == "ecw-box ecw-boxerror_unsel") TableCell.className = "ecw-box ecw-boxnormal_unsel";
+		}
+		
+	for (i = 0; i < Words; i++)
+	{
+		// Get the user's entry for this word.
+		UserEntry = "";
+		for (j = 0; j < WordLength[i]; j++)
+		{
+			if (i <= LastHorizontalWord)
+				TableCell = CellAt(WordX[i] + j, WordY[i]);
+			else
+				TableCell = CellAt(WordX[i], WordY[i] + j);
+			if (TableCell.innerHTML.length > 0 && TableCell.innerHTML.toLowerCase() != "&nbsp;")
+			{
+				UserEntry += TableCell.innerHTML.toUpperCase();
+			}
+			else
+			{
+				UserEntry = "";
+				EmptyFound++;
+				break;
+			}
+		}
+		UserEntry = UserEntry.replace(/&AMP;/g, '&');
+		// If this word doesn't match, it's an error.
+		if (HashWord(UserEntry) != AnswerHash[i] && UserEntry.length > 0)
+		{
+			ErrorsFound++;
+			ChangeWordStyle(i, "ecw-box ecw-boxerror_unsel");
+		}
+	}
+	
+	// If they can only check once, disable things prematurely.
+	if ( OnlyCheckOnce )
+	{
+		CrosswordFinished = true;
+		document.getElementById("checkbutton").style.display = "none";
+	}
+	
+	// If errors were found, just exit now.
+	if (ErrorsFound > 0 && EmptyFound > 0)
+		document.getElementById("welcomemessage").innerHTML = ErrorsFound + (ErrorsFound > 1 ? " errors" : " error") + " and " + EmptyFound + (EmptyFound > 1 ? " incomplete words were" : " incomplete word was") + " found.";
+	else if (ErrorsFound > 0)
+		document.getElementById("welcomemessage").innerHTML = ErrorsFound + (ErrorsFound > 1 ? " errors were" : " error was") + " found.";
+	else if (EmptyFound > 0)
+		document.getElementById("welcomemessage").innerHTML = "No errors were found, but " + EmptyFound + (EmptyFound > 1 ? " incomplete words were" : " incomplete word was") + " found.";
+	
+	if (ErrorsFound + EmptyFound > 0)
+	{
+		document.getElementById("welcomemessage").style.display = "";
+		return;
+	}
+			
+	// They finished the puzzle!
+	CrosswordFinished = true;
+	document.getElementById("checkbutton").style.display = "none";
+	document.getElementById("congratulations").style.display = "block";
+	document.getElementById("welcomemessage").style.display = "none";
+}
+
+// Called when the "cheat" link is clicked.
+function CheatClick()
+{
+	if (CrosswordFinished) return;
+	var OldWord = CurrentWord;
+	document.getElementById("wordentry").value = Word[CurrentWord];
+	OKClick();
+	ChangeWordStyle(OldWord, "ecw-box ecw-boxcheated_unsel");
+}
+
+// Returns a one-way hash for a word.
+function HashWord(Word)
+{
+	var x = (Word.charCodeAt(0) * 719) % 1138;
+	var Hash = 837;
+	var i;
+	for (i = 1; i <= Word.length; i++)
+		Hash = (Hash * i + 5 + (Word.charCodeAt(i - 1) - 64) * x) % 98503;
+	return Hash;
+}
+
+//-->
+</script>
+
+</td>
+
+<td valign="top" style="padding-left: 1em;">
+
+<div class="ecw-copyright">
+	<a href="http://www.eclipsecrossword.com/" onclick="this.target='_blank'" style="font-weight: bold;">EclipseCrossword</a> &copy; 2000-2013
+</div>
+
+<div id="welcomemessage" class="ecw-answerbox" style="display:none;">
+<h3>Welcome!</h3>
+<p>Click a word in the puzzle to get started.</p>
+</div>
+
+<div id="answerbox" class="ecw-answerbox" style="display:none;">
+<h3 id="wordlabel" class="ecw-wordlabel"> &nbsp;</h3>
+<div id="wordinfo" class="ecw-wordinfo"> </div>
+<div id="wordclue" class="ecw-cluebox"> </div>
+<div style="margin-top: 1em;">
+	<input class="ecw-input" id="wordentry" type="text" size="24" style="font-weight: bold; text-transform:uppercase;" onkeypress="WordEntryKeyPress(event)" onchange="WordEntryKeyPress(event)" />
+</div>
+<div id="worderror" class="ecw-worderror"></div>
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="margin-top:1em;"><tbody><tr><td>
+<button id="cheatbutton" type="button" class="ecw-input ecw-button" onclick="CheatClick();">Solve</button>
+</td><td align="right">
+<button id="okbutton" type="button" class="ecw-input ecw-button" onclick="OKClick();" style="font-weight: bold;">OK</button> &nbsp;
+<button id="cancelbutton" type="button" class="ecw-input ecw-button" onclick="DeselectCurrentWord();">Cancel</button>
+</td></tr></tbody></table>
+
+</div>
+
+<div id="congratulations" class="ecw-answerbox" style="display:none;">
+<h3>Congratulations!</h3>
+<p>You have completed this <a href="http://www.eclipsecrossword.com" style="color: black; text-decoration:none;">crossword puzzle</a>.
+</p>
+<p>If you would like to be able to create interactive
+<a href="http://www.eclipsecrossword.com" style="color: black; text-decoration:none;">crosswords</a>
+like this yourself, get <a href="http://www.eclipsecrossword.com" onclick="this.target='_blank'">EclipseCrossword</a>
+from Green Eclipse&mdash;it's free!
+</p>
+</div>
+
+</td></tr></table>
+
+<div style="margin-top: 1em;">
+	<button id="checkbutton" type="button" onclick="CheckClick();" style="display: none;">Check puzzle</button>
+</div>
+
+<script type="text/javascript"><!--
+BeginCrossword();
+//-->
+</script>
+
+<!-- Created with EclipseCrossword, (C) Copyright 2000-2013 Green Eclipse.  eclipsecrossword.com -->
+
+</body></html>
+
